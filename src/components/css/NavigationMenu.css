@@ -26,7 +26,7 @@
 .navbar-item a::before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 40%;
   height: 2px;
   background-color: #007bff; /* Magical color */
   transform: scaleX(0);
