@@ -1,39 +1,232 @@
+.about-me-container {
+  background-color: #eff2f3;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-me-container p {
+  margin-bottom: 10px; /* Adjust spacing as needed */
+}
+.about-me-container h2 {
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+.about-me-container em{
+  font-style: italic;
+}
+.about-me-container strong{
+  font-weight: bold;
+} .headline-page{
+  font-size: 24px;
+  flex-direction: column;
+   
+  text-decoration: none; 
+
+  background-image: linear-gradient(120deg, #3498db, #f39c12);
+  background-size: 100% 0.2em;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.3s ease-in-out;
+
+  
+  /* &:hover {
+    background-size: 100% 100%;
+  }  */
+}
+/*Navbar*/
 .navbar {
   background-color: #333;
-  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); /* Adjust values as needed */
+  padding: 15px;
 }
 
 .navbar-list {
   list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   margin: 0;
   padding: 0;
-  display: flex;
+  box-shadow: #333;
 }
 
 .navbar-item {
-  flex: 1;
-  text-align: center;
-}
-
-.navbar-item a {
-  display: block;
-  padding: 15px;
-  color: white;
-  text-decoration: none;
-  position: relative; /* For the magical effect */
-}
-
-.navbar-item a::before {
-  content: "";
-  position: absolute;
-  width: 40%;
-  height: 2px;
-  background-color: #007bff; /* Magical color */
-  transform: scaleX(0);
-  transform-origin: left;
+  position: relative;
+  overflow: hidden;
+  transform: perspective(1000px) translateZ(0);
   transition: transform 0.3s ease-in-out;
 }
 
-.navbar-item a:hover::before {
-  transform: scaleX(1);
+.navbar-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-item span.icofont {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-item:hover {
+  transform: translateY(-4px) translateZ(30px);
+}
+
+.navbar-item:hover span.icofont {
+  transform: rotate(360deg);
+}
+p {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+/*Pages*/
+.slide-me {
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.slide-me strong {
+  opacity: 0;
+  position: relative;
+  left: 100%;
+  animation: slide-in 1s forwards;
+}
+
+.slide-from-right {
+  animation-delay: 0s;
+}
+
+.slide-from-right.fade-in-1 {
+  animation-delay: 0.2s;
+}
+
+.slide-from-right.fade-in-2 {
+  animation-delay: 0.4s;
+}
+
+.slide-from-right.fade-in-3 {
+  animation-delay: 0.6s;
+}
+
+.slide-from-right.fade-in-4 {
+  animation-delay: 0.8s;
+}
+
+
+@keyframes slide-in {
+  from {
+    left: 100%;
+    opacity: 0;
+  }
+  to {
+    left: 0%;
+    opacity: 1;
+  }
+}
+.slide-me span {
+  display: inline-block;
+}
+
+.slide-me .fade-in-fast {
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+/* ... Other fade-in classes ... */
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+/*Language bttn */
+
+.language-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  /* font-size: 24px; */
+}
+.language-switch button {
+  /* padding: 10px 20px; */
+}
+.hline {
+  position: relative;
+  text-align: center;
+}
+
+.hline::before {
+  content: '';
+  position: absolute;
+  width: 10%; /* Set the width to half of the container width */
+  height: 2px; /* You can adjust the thickness of the underline */
+  bottom: 0;
+  left: 45%; /* Set left to center the underline within the container */
+  background-color: #3498db; /* You can change the color to your preferred color */
+  transform: scaleX(0); /* Initial state: invisible */
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hline:hover::before {
+  transform: scaleX(1); /* On hover, make the underline visible */
+}
+
+
+
+/* Add more animation keyframes and styles as needed */
+/* Portfolio.css */
+/* Portfolio.css */
+.portfolio-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.portfolio-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333; /* Dark text color */
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.project-image {
+  width: 520px; /* Set a fixed width */
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-description {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.project-description h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333; /* Dark text color */
+}
+
+.project-description p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666; /* Slightly lighter text color */
 }
