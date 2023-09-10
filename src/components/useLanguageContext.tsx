@@ -1,12 +1,14 @@
-// useLanguageContext.tsx
 import React, { ReactNode, createContext, useContext, useState } from 'react';
 
 // Create a context for the language
-const LanguageContext = createContext({
-    language: 'en', // Default language
-    toggleLanguage: () => {}, // Default toggleLanguage function
-  });
-export const LanguageProvider = ({children} : {children: ReactNode}) => {
+interface LanguageContextType {
+  language: string;
+  toggleLanguage: () => void;
+}
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState('en');
 
   const toggleLanguage = () => {
@@ -21,5 +23,9 @@ export const LanguageProvider = ({children} : {children: ReactNode}) => {
 };
 
 export const useLanguageContext = () => {
-  return useContext(LanguageContext);
+  const context = useContext(LanguageContext);
+  if (context === undefined) {
+    throw new Error('useLanguageContext must be used within a LanguageProvider');
+  }
+  return context;
 };

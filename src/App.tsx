@@ -9,6 +9,7 @@ import Cv from './pages/Cv';
 import { LanguageProvider } from './components/LanguageProvider';
 import LanguageSwitcher from './components/LanguageSwitcher';
 
+
 const App: React.FC = () => {
   return (
     <LanguageProvider initialLanguage="swedish"> {/* Provide initialLanguage here */}

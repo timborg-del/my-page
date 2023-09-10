@@ -5,9 +5,10 @@ type Language = 'swedish' | 'english';
 
 // Define the shape of the context
 interface LanguageContextProps {
-  children?: ReactNode; // Make children prop optional
+  children?: React.ReactNode;
   language: Language;
   toggleLanguage: () => void;
+  initialLanguage: Language; // Add initialLanguage to the context interface
 }
 
 // Create the language context
@@ -23,19 +24,20 @@ export const useLanguageContext = () => {
 };
 
 // LanguageProvider component
-export const LanguageProvider: React.FC<LanguageContextProps> = ({ children }) => {
+export const LanguageProvider: React.FC<{ initialLanguage: Language }> = ({ children, initialLanguage }) => {
   // Define and initialize the language state
-  const [language, setLanguage] = useState<Language>('swedish');
+  const [language, setLanguage] = useState<Language>(initialLanguage);
 
   // Function to toggle the language
   const toggleLanguage = () => {
-    setLanguage(prevLanguage => (prevLanguage === 'swedish' ? 'english' : 'swedish'));
+    setLanguage((prevLanguage) => (prevLanguage === 'swedish' ? 'english' : 'swedish'));
   };
 
   // Create the context value
   const contextValue = {
     language,
     toggleLanguage,
+    initialLanguage, // Pass initialLanguage in the context
   };
 
   return (
@@ -44,4 +46,3 @@ export const LanguageProvider: React.FC<LanguageContextProps> = ({ children }) =
     </LanguageContext.Provider>
   );
 };
-
