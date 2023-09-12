@@ -7,6 +7,7 @@ type Language = 'swedish' | 'english';
 interface LanguageContextProps {
   children?: ReactNode; // Make children prop optional
   language: Language;
+  initialLanguage: Language;
   toggleLanguage: () => void;
 }
 
@@ -23,7 +24,7 @@ export const useLanguageContext = () => {
 };
 
 // LanguageProvider component
-export const LanguageProvider: React.FC<LanguageContextProps> = ({ children }) => {
+export const LanguageProvider: React.FC<LanguageContextProps> = ({ children, initialLanguage }) => {
   // Define and initialize the language state
   const [language, setLanguage] = useState<Language>('swedish');
 
@@ -35,6 +36,7 @@ export const LanguageProvider: React.FC<LanguageContextProps> = ({ children }) =
   // Create the context value
   const contextValue = {
     language,
+    initialLanguage,
     toggleLanguage,
   };
 
