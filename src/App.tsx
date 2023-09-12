@@ -11,8 +11,12 @@ import LanguageSwitcher from './components/LanguageSwitcher';
 
 
 const App: React.FC = () => {
+  function toggleLanguage(): void {
+    throw new Error('Function not implemented.');
+  }
+
   return (
-    <LanguageProvider initialLanguage="swedish"> {/* Provide initialLanguage here */}
+    <LanguageProvider initialLanguage="swedish" language='swedish' toggleLanguage={toggleLanguage}>  {/* Provide initialLanguage here */}
       <Router>
         <NavigationMenu />
         <Routes>
@@ -21,7 +25,9 @@ const App: React.FC = () => {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <LanguageSwitcher /> {/* LanguageSwitcher can access context internally */}
+        <div className="language-switcher-container">
+            <LanguageSwitcher />
+          </div>
       </Router>
     </LanguageProvider>
   );

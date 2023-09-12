@@ -157,7 +157,7 @@ p {
   /* font-size: 24px; */
 }
 .language-switch button {
-  /* padding: 10px 20px; */
+  padding: 10px 20px;
 }
 .hline {
   position: relative;
@@ -230,3 +230,12 @@ p {
   line-height: 1.5;
   color: #666; /* Slightly lighter text color */
 }
+
+.language-switcher-container {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  z-index: 999; /* Ensure it appears above other elements */
+}
+
+

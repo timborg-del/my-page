@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLanguageContext } from '../components/useLanguageContext';
+import { useLanguageContext } from '../components/LanguageProvider';
  
 export const Cv = () => {
   const { language } = useLanguageContext();

@@ -30,6 +30,7 @@ export const LanguageProvider: React.FC<LanguageContextProps> = ({ children, ini
 
   // Function to toggle the language
   const toggleLanguage = () => {
+    console.log('toggleLanguage function called');
     setLanguage(prevLanguage => (prevLanguage === 'swedish' ? 'english' : 'swedish'));
   };
 
