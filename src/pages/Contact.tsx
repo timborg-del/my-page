@@ -21,11 +21,11 @@ const { language } = useLanguageContext();
               </p>
               <br />
               <p className="slide-from-right fade-in-2">
-                {language === 'swedish' ? 'Telefon:' : 'Phone:'} +1 (123) 456-7890
+                {language === 'swedish' ? 'Telefon:' : 'Phone:'} +46 (790) 47 37 771
               </p>
               <br />
               <p className="slide-from-right fade-in-3">
-                {language === 'swedish' ? 'Hemsida:' : 'Home Page:'} www.applebee.se
+                {language === 'swedish' ? 'Hemsida:' : 'Home Page:'} <a href='applebee.se' target='_blank'>www.applebee.se</a>
               </p>
             </span>
           </p>

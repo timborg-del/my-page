@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import Cv from './pages/Cv';
 import { LanguageProvider } from './components/LanguageProvider';
 import LanguageSwitcher from './components/LanguageSwitcher';
+import Home from './pages/Home';
 
 
 const App: React.FC = () => {
@@ -20,6 +21,7 @@ const App: React.FC = () => {
       <Router>
         <NavigationMenu />
         <Routes>
+         <Route path="/" element={<Home />} />
           <Route path="/Cv" element={<Cv />} />
           <Route path="/aboutme" element={<AboutMe />} />
           <Route path="/portfolio" element={<Portfolio />} />

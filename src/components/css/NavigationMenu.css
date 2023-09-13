@@ -44,9 +44,14 @@
 }
 /*Navbar*/
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
   background-color: #333;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); /* Adjust values as needed */
   padding: 15px;
+  padding-top: -40px; /* Adjust as needed */
 }
 
 .navbar-list {
@@ -151,31 +156,41 @@ p {
 /*Language bttn */
 
 .language-switch {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  /* font-size: 24px; */
+  position: fixed;
+  top: 80px; /* Adjust the vertical position as needed */
+  right: 10px; /* Adjust the horizontal position as needed */
 }
-.language-switch button {
-  padding: 10px 20px;
+
+.language-button {
+  padding: 0px 2px;
+  /* Add these styles to keep the button fixed */
+  position: fixed;
+  top: 80px; /* Adjust the vertical position as needed (same as .language-switch) */
+  right: 10px; /* Adjust the horizontal position as needed (same as .language-switch) */
 }
 .hline {
   position: relative;
   text-align: center;
+  display: inline-block;
+  margin-left: 50%;
+  margin-top: 100px;
 }
 
 .hline::before {
-  content: '';
-  position: absolute;
-  width: 10%; /* Set the width to half of the container width */
-  height: 2px; /* You can adjust the thickness of the underline */
-  bottom: 0;
-  left: 45%; /* Set left to center the underline within the container */
-  background-color: #3498db; /* You can change the color to your preferred color */
-  transform: scaleX(0); /* Initial state: invisible */
-  transform-origin: center;
-  transition: transform 0.3s ease-in-out;
-}
+    content: '';
+    position: absolute;
+    width: 100%; /* Adjusted to 100% */
+    height: 2px; /* You can adjust the thickness of the underline */
+    bottom: 0;
+    left: 0; /* Center the underline within the container */
+    right: 0; /* Center the underline within the container */
+    margin: 0 auto; /* Center the underline horizontally */
+    background-color: #3498db; /* You can change the color to your preferred color */
+    transform: scaleX(0); /* Initial state: invisible */
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
 
 .hline:hover::before {
   transform: scaleX(1); /* On hover, make the underline visible */
@@ -197,6 +212,27 @@ p {
   font-size: 32px;
   margin-bottom: 30px;
   color: #333; /* Dark text color */
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+  display: inline-block; /* Make the text container an inline block */
+}
+
+.portfolio-title::before {
+  content: '';
+  position: absolute;
+  width: 100%; /* Adjusted to 100% */
+  height: 2px; /* You can adjust the thickness of the underline */
+  bottom: 0;
+  left: 0; /* Center the underline by changing left to 0 */
+  background-color: #3498db; /* You can change the color to your preferred color */
+  transform: scaleX(0); /* Initial state: invisible */
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-title:hover::before {
+  transform: scaleX(1); /* On hover, make the underline visible */
 }
 
 .project {
@@ -237,5 +273,53 @@ p {
   right: 10px;
   z-index: 999; /* Ensure it appears above other elements */
 }
+/* Home.css */
+
+/* Styles for the home container */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensure the container covers at least the entire viewport height */
+  background-color: #f0f0f0; /* Background color for the entire component */
+}
+
+/* Styles for the hero image container */
+.hero-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for the hero image */
+.hero-image img {
+  max-width: 50%; /* Ensure the image doesn't exceed its container's width */
+  height: auto; /* Maintain the image's aspect ratio */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the image */
+}
+
+/* Styles for the content to the right of the image */
+.home-content {
+  padding-right: 20%;
+  text-align: left; /* Align text to the left */
+  margin-left: 20px; /* Add some margin to separate content from the image */
+}
 
 
+/* Styles for the heading */
+.home-content h1 {
+  font-size: 36px;
+  color: #333; /* Text color for the heading */
+  margin-bottom: 10px;
+}
+
+/* Styles for the paragraph */
+.home-content p {
+  font-size: 18px;
+  color: #666; /* Text color for the paragraph */
+
+}
+.portfolio-title{
+  padding-top: 30px;
+}
