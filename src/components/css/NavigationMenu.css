@@ -14,6 +14,50 @@
   flex-direction: column;
   align-items: center;
 }
+.cv-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.text-cv {
+  max-width: 48%;
+  text-align: left;
+  margin-top: 85px;
+  margin-left: 145px;
+}
+
+.text-cv1 {
+  max-width: 48%;
+  text-align: left;
+  margin-top: 100px;
+  margin-right: 20px;
+}
+
+.image-placeholder {
+  text-align: left; /* Align the text to the left */
+  margin-bottom: 10px;
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center the items vertically */
+}
+
+.img-class {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #333;
+  border-radius: 8px;
+  margin-right: 10px; /* Add margin to the right of the image for spacing */
+}
+
+
+
+.experience-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .about-me-container p {
   margin-bottom: 10px; /* Adjust spacing as needed */
 }
@@ -172,8 +216,12 @@ p {
   position: relative;
   text-align: center;
   display: inline-block;
-  margin-left: 21%;
+  margin-left: 45%;
   margin-top: 100px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333; /* Adjust the color to your preference */
 }
 
 .hline::before {
@@ -215,7 +263,11 @@ p {
   position: relative;
   text-align: center;
   margin-top: 50px;
-  display: inline-block; /* Make the text container an inline block */
+  display: inline-block;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333; /* Adjust the color to your preference */ /* Make the text container an inline block */
 }
 
 .portfolio-title::before {
@@ -323,3 +375,20 @@ p {
 .portfolio-title{
   padding-top: 30px;
 }
+
+/* .img-class {
+  width: 100px;
+  margin-left: 10%; /* Set the desired width 
+  height: auto; /* Ma
+  padding-top: 30px;
+} */
+.image-and-text {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px; Adjust spacing as needed */
+}
+
+
+/* Add additional styling as needed */
