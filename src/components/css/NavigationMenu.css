@@ -23,7 +23,7 @@
 .text-cv {
   max-width: 48%;
   text-align: left;
-  margin-top: 85px;
+  margin-top: 45px;
   margin-left: 145px;
 }
 
@@ -44,7 +44,6 @@
 .img-class {
   max-width: 100%;
   height: auto;
-  border: 2px solid #333;
   border-radius: 8px;
   margin-right: 10px; /* Add margin to the right of the image for spacing */
 }
