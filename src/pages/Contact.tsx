@@ -3,10 +3,12 @@ import { useLanguageContext } from '../components/LanguageProvider';
 const Contact= () =>{
 const { language } = useLanguageContext();
     return(
-        <div>
+        <div >
+          <div className='container-hline'>
         <header>
-          <h1 className='hline'>{language === 'swedish' ? 'Kontakt' : 'Contact'}</h1>
+          <h1 className='hline1'>{language === 'swedish' ? 'Kontakt' : 'Contact'}</h1>
         </header>
+        </div>
         <div className="about-me-container">
           <p className='slide-me'>
             <strong className='headline-page'>

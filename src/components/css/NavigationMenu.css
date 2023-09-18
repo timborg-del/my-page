@@ -270,82 +270,60 @@ p {
 }
 /*Language bttn */
 
-.language-switch {
+.language-button {
+  padding: 0;
+  background: none;
+  border: none;
   position: fixed;
   top: 80px; /* Adjust the vertical position as needed */
   right: 10px; /* Adjust the horizontal position as needed */
 }
 
-.language-button {
-  padding: 0px 2px;
-  /* Add these styles to keep the button fixed */
-  position: fixed;
-  top: 80px; /* Adjust the vertical position as needed (same as .language-switch) */
-  right: 10px; /* Adjust the horizontal position as needed (same as .language-switch) */
+.flag-icon {
+  font-size: 32px; /* Adjust the size of the flag icon */
+  line-height: 1; /* Ensure the flag icon is vertically centered */
 }
-.hline {
-  position: relative;
+
+
+.container-hline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh; /* Adjust this to fit your layout */
+}
+
+.hline1 {
   text-align: center;
-  display: inline-block;
-  margin-left: 45%;
-  margin-top: 100px;
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 36px;
-  font-weight: bold;
-  color: #333; /* Adjust the color to your preference */
-}
-
-.hline::before {
-    content: '';
-    position: absolute;
-    width: 100%; /* Adjusted to 100% */
-    height: 2px; /* You can adjust the thickness of the underline */
-    bottom: 0;
-    left: 0; /* Center the underline within the container */
-    right: 0; /* Center the underline within the container */
-    margin: 0 auto; /* Center the underline horizontally */
-    background-color: #3498db; /* You can change the color to your preferred color */
-    transform: scaleX(0); /* Initial state: invisible */
-    transform-origin: center;
-    transition: transform 0.3s ease-in-out;
-  }
-
-
-.hline:hover::before {
-  transform: scaleX(1); /* On hover, make the underline visible */
-}
-
-.hline1{
-  position: relative;
-  text-align: center;
-  display: inline-block;
-  margin-left: 45%;
-  margin-top: 100px;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 36px;
   font-weight: bold;
   color: #333;
-
+  position: relative; /* Add position relative to create a stacking context */
+  z-index: 1; /* Set a positive z-index value */
 }
+
 .hline1::before {
   content: '';
+  display: block;
+  width: 100%; /* Adjusted to the desired width of the underline */
+  height: 2px;
+  background-color: #3498db;
   position: absolute;
-  width: 80%; /* Adjusted to 100% */
-  height: 2px; /* You can adjust the thickness of the underline */
   bottom: 0;
-  left: 32px; /* Center the underline within the container */
-  right: 0; /* Center the underline within the container */
-  margin: 0 auto; /* Center the underline horizontally */
-  background-color: #3498db; /* You can change the color to your preferred color */
+  left: 0;
   transform: scaleX(0); /* Initial state: invisible */
   transform-origin: center;
   transition: transform 0.3s ease-in-out;
+  z-index: -1; /* Set a negative z-index to place it below the text */
 }
-
 
 .hline1:hover::before {
-transform: scaleX(1); /* On hover, make the underline visible */
+  transform: scaleX(1); /* On hover, make the underline visible */
 }
+
+
+
 
 
 

@@ -10,8 +10,13 @@ export const Portfolio = () => {
 
 
   return (
+    <div>
+    <div className='container-hline'>
+        <header>
+      <h1 className="hline1">{language === 'swedish' ? 'Portfölj' : 'Portfolio'}</h1>
+    </header>
+    </div>
     <div className="portfolio-container">
-      <h2 className="portfolio-title">Portfolio</h2>
 
       <div className="project">
         <img
@@ -62,6 +67,7 @@ export const Portfolio = () => {
       </div>
       
       {/* Add more project sections as needed */}
+    </div>
     </div>
   );
 };

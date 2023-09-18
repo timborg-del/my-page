@@ -50,7 +50,7 @@ const AboutMe = () => {
   const lovedOnesText = language === 'swedish' ? (
     <div>
       <p>
-        Självklart har jag en fantastisk medbrottsling, min flickvän [Flickvänens namn]. Vi delar dessa passioner och tillbringar kvalitetstid tillsammans, vare sig det är att utforska nya stigar, spela musik eller bara umgås.
+        Självklart har jag en fantastisk medbrottsling, min flickvän Natalie. Vi delar dessa passioner och tillbringar kvalitetstid tillsammans, vare sig det är att utforska nya stigar, spela musik eller bara umgås.
       </p>
       <p>
         Men det är inte allt; jag har turen att ha en krets av nära vänner som är som familj. Jag har mina fem bästa vänner, en syster, hennes man, deras bedårande dotter och, självklart, min alltid stöttande mamma. De lägger till ännu mer färg och glädje i mitt liv, och tillsammans skapar vi minnen som varar livet ut.
@@ -59,7 +59,7 @@ const AboutMe = () => {
   ) : (
     <div>
       <p>
-        Of course, I've got a fantastic partner in crime, my girlfriend [Girlfriend's Name]. We share these passions and spend quality time together, whether it's exploring new trails, making music, or just hanging out.
+        Of course, I've got a fantastic partner in crime, my girlfriend Natalie. We share these passions and spend quality time together, whether it's exploring new trails, making music, or just hanging out.
       </p>
       <p>
         But that's not all; I'm lucky to have a circle of close friends who are like family. I've got my five best friends, a sister, her husband, their adorable daughter, and, of course, my ever-supportive mother. They add even more color and joy to my life, and together, we create memories that last a lifetime.
@@ -69,11 +69,13 @@ const AboutMe = () => {
 
   return (
     <div>
+      <div className='container-hline'>
       <header>
-        <h1 className="hline">
+        <h1 className='hline1'>       
           {language === 'swedish' ? 'Om Mig' : 'About Me'}
-        </h1>
+          </h1>       
       </header>
+      </div>
       <div className="about-me-container">
         <section>
           <h2 className={`headline-page ${language === 'swedish' ? 'slide-me' : 'slide-from-right fade-in-1'}`}>

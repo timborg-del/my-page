@@ -44,7 +44,7 @@ export const Cv = () => {
         Under min tid på Lexicon förvärvade jag en djup förståelse för olika ämnen, inklusive MySQL, MVC-arkitektur och React. Mot slutet av programmet samarbetade vi som ett team i ett praktikprojekt för en riktig klient, Milagros Corner. Vi utvecklade framgångsrikt ett 'Point of Sale' (POS)-system åt dem.
       </p>
       <p>
-        Efter att ha framgångsrikt avslutat min yrkesutbildning beslutade jag att temporärt arbeta som svetsare samtidigt som jag aktivt förföljde mitt långsiktiga mål att bli programmerare. Idag känner jag mig väl förberedd och entusiastisk inför att inleda min karriär som programmerare. Min hängivenhet och beslutsamhet är orubbliga, och jag ser fram emot att bidra med mina färdigheter till den dynamiska programmeringsbranschen.
+        Efter att ha framgångsrikt avslutat min yrkesutbildning beslutade jag att temporärt arbeta som svetsare samtidigt som jag aktivt förföljer mitt långsiktiga mål att bli programmerare. Idag känner jag mig väl förberedd och entusiastisk inför att inleda min karriär som programmerare. Min hängivenhet och beslutsamhet är orubbliga, och jag ser fram emot att bidra med mina färdigheter till den dynamiska programmeringsbranschen.
       </p>
     </div>
   ) : (
@@ -63,9 +63,11 @@ export const Cv = () => {
 
   return (
     <div>
+      <div className='container-hline'>
           <header>
-        <h1 className="hline1" style={{ paddingLeft: '45px' }}>{language === 'swedish' ? 'CV' : 'Resume'}</h1>
+        <h1 className="hline1">{language === 'swedish' ? 'CV' : 'Resume'}</h1>
       </header>
+      </div>
 
     <div className="cv">
       <div className="cv-container">
