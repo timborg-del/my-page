@@ -203,6 +203,28 @@
 .navbar-item:hover span.icofont {
   transform: rotate(360deg);
 }
+
+@media (max-width: 500px) {
+
+  .navbar {
+    max-width: 25%; /* Set the maximum width to 100% */
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px; /* Add some padding to the left */
+  }
+
+  .navbar-item {
+    margin-bottom: 5px; /* Add some space between items */
+  }
+  /* Adjust the font size for mobile view */
+  .navbar-item a {
+    font-size: 10px;
+  }
+}
+
 p {
   animation-duration: 3s;
   animation-name: slidein;

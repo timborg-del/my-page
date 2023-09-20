@@ -10,7 +10,7 @@ export const Cv = () => {
   const careerChangeText = language === 'swedish' ? (
     <div>
       <p>
-        På Volvo Braås CE har jag varit i 4 år och svetsat, samtidigt som jag har haft programmering som en hobby på min fritid. Där har jag fått arbeta i team för att tillverka korgar till maskinerna, särskilt flaket till dumptrarna. Det är ett mycket krävande arbete eftersom tillverkningen av korgarna tar betydligt längre tid än alla andra komponenter i hela processen att färdigställa en dumper (maskin). 
+        På Volvo Braås CE har jag varit i 4 år och svetsat, samtidigt som jag har haft programmering som en hobby på min fritid. Där har jag fått arbeta i team för att tillverka korgar till maskinerna, särskilt flaket till dumprar. Det är ett mycket krävande arbete eftersom tillverkningen av korgarna tar betydligt längre tid än alla andra komponenter i hela processen att färdigställa en dumper (maskin). 
       </p>
       <p>
         Nu strävar jag efter att byta karriär eftersom jag önskar en vardag där jag ständigt utvecklas och lär mig nya saker. Det kan vara utmanande att arbeta inom en industri där man producerar samma produkt om och om igen, vilket är varför jag tror att programmering passar mig bättre.

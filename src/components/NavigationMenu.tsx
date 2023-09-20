@@ -17,7 +17,7 @@ return (
         <Link to=""><span className="icofont">&#xef47;</span>{language === 'swedish' ? ' Hem' : ' Home'}</Link>
         </li>
         <li className="navbar-item">
-        <Link to="/cv"><span className="icofont"style={{ fontSize: '24px' }}>&#xe82f;</span>{language === 'swedish' ? ' CV' : ' Resume'}</Link>
+        <Link to="/cv"><span className="icofont">&#xe82f;</span>{language === 'swedish' ? ' CV' : ' Resume'}</Link>
         </li>
         <li className="navbar-item">
         <Link to="/aboutme"><span className="icofont">&#xed52;</span>{language === 'swedish' ? ' Om Mig' : ' About Me'}</Link>

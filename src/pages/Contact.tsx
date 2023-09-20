@@ -27,7 +27,7 @@ const { language } = useLanguageContext();
               </p>
               <br />
               <p className="slide-from-right fade-in-3">
-                {language === 'swedish' ? 'Hemsida:' : 'Home Page:'} <a href='applebee.se' target='_blank'>www.applebee.se</a>
+                {language === 'swedish' ? 'Hemsida:' : 'Home Page:'} <a href='https://www.applebee.se' target='_blank'>www.applebee.se</a>
               </p>
             </span>
           </p>
