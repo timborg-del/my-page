@@ -207,21 +207,30 @@
 @media (max-width: 500px) {
 
   .navbar {
-    max-width: 25%; /* Set the maximum width to 100% */
+    max-width: 25%;
+    border-bottom-right-radius: 20px; /* Apply border-radius to the bottom-right corner */
+    margin-bottom: auto;
+    padding: 1 0px;
+    
   }
+  
 
   .navbar-list {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 20px; /* Add some padding to the left */
+    padding: 0 0px; /* Add some padding to the left */
+    
   }
 
   .navbar-item {
-    margin-bottom: 5px; /* Add some space between items */
+    margin-bottom: 2px;
+    margin-top: 2px;
+     /* Add some space between items */
   }
   /* Adjust the font size for mobile view */
   .navbar-item a {
-    font-size: 10px;
+    font-size: 12px;
+    
   }
 }
 
