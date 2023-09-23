@@ -440,6 +440,42 @@ p {
   line-height: 1.5;
   color: #666; /* Slightly lighter text color */
 }
+@media (max-width: 500px){
+  /* Your existing styles for desktop view */
+
+/* Media query for phone screen size */
+@media (max-width: 500px) {
+  .project {
+    flex-direction: column; /* Stack content vertically */
+    margin-bottom: 20px; /* Reduce the margin for better spacing */
+  }
+
+  .project-image {
+    width: 100%; /* Make the image full width */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    border-radius: 0; /* Remove border-radius for a square image */
+    box-shadow: none; /* Remove the box shadow */
+  }
+
+  .project-description {
+    padding: 10px; /* Reduce padding for better spacing */
+    text-align: center; /* Center-align the text */
+  }
+
+  .project-description h3 {
+    font-size: 18px; /* Reduce the font size */
+    margin-bottom: 5px; /* Reduce margin for better spacing */
+  }
+
+  .project-description p {
+    font-size: 14px; /* Reduce the font size */
+    line-height: 1.4;
+    color: #666; /* Slightly lighter text color */
+  }
+}
+
+
+}
 
 .language-switcher-container {
   position: absolute;
