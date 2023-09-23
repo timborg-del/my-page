@@ -204,35 +204,45 @@
   transform: rotate(360deg);
 }
 
-@media (max-width: 500px) {
+/* Your existing styles for desktop view */
 
+/* Media query for phone screen size */
+@media (max-width: 500px) {
   .navbar {
-    max-width: 25%;
-    border-bottom-right-radius: 20px; /* Apply border-radius to the bottom-right corner */
-    margin-bottom: auto;
-    padding: 1 0px;
-    
+    max-width: 100%; /* Make it full width */
+    position: fixed; /* Stick it to the bottom */
+    bottom: 50;
+    left: 0;
+    right: 0;
+    z-index: 100; /* Bring it to the front */
+    border-top-left-radius: 20px; /* Apply border-radius to the top-left corner */
+    border-top-right-radius: 20px; /* Apply border-radius to the top-right corner */
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0; /* Add some padding to top and bottom */
   }
-  
 
   .navbar-list {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 0px; /* Add some padding to the left */
-    
+    flex-direction: row; /* Align icons horizontally */
+    align-items: center;
+    padding: 0;
+    margin: 0;
   }
 
   .navbar-item {
-    margin-bottom: 2px;
-    margin-top: 2px;
-     /* Add some space between items */
+    margin-left: 10px; /* Add some space between items */
+    margin-right: 10px;
   }
+
   /* Adjust the font size for mobile view */
   .navbar-item a {
-    font-size: 12px;
-    
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
   }
 }
+
 
 p {
   animation-duration: 3s;
@@ -512,13 +522,6 @@ p {
   height: auto; /* Ma
   padding-top: 30px;
 } */
-.image-and-text {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 20px; Adjust spacing as needed */
-}
 
 
 /* Add additional styling as needed */
