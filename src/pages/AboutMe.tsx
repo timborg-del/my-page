@@ -8,13 +8,13 @@ const AboutMe = () => {
   const aboutMeText = language === 'swedish' ? (
     <div>
       <p>
-        Jag heter Tim Lindborg, och jag gillar att hålla igång. På dagarna är jag en entusiastisk programmerare som spenderar min lediga tid med att fördjupa mig i programmeringsvärlden. Men när arbetsdagen är över är det dags för äventyr i den verkliga världen.
+        Jag heter Tim Lindborg. På dagarna är jag en entusiastisk programmerare som spenderar min lediga tid med att fördjupa mig i programmeringsvärlden. Men när arbetsdagen är över är det dags för äventyr i den verkliga världen.
       </p>
     </div>
   ) : (
     <div>
       <p>
-        I'm Tim Lindborg, and I like to be bussy. By day, I'm a coding enthusiast, spending my free time diving into the world of programming. But when work is done, it's time for some down-to-earth adventures.
+        I'm Tim Lindborg. By day, I'm a coding enthusiast, spending my free time diving into the world of programming. But when work is done, it's time for some down-to-earth adventures.
       </p>
     </div>
   );
@@ -36,13 +36,13 @@ const AboutMe = () => {
   const musicalInterestsText = language === 'swedish' ? (
     <div>
       <p>
-        Och sedan finns min gitarr. När jag inte kodar eller springer så spelar jag på gitarren bara för skojs skull. Det är mitt sätt att koppla av och låta kreativiteten flöda.
+        När jag inte kodar eller springer så spelar jag på gitarren bara för skojs skull. Det är mitt sätt att koppla av och låta kreativiteten flöda.
       </p>
     </div>
   ) : (
     <div>
       <p>
-        And then there's my guitar. When I'm not coding or running i'm strumming away just for fun. It's my way of unwinding and letting creativity flow.
+        When I'm not coding or running i'm strumming away on my guitar just for fun. It's my way of unwinding and letting creativity flow.
       </p>
     </div>
   );
