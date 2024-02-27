@@ -220,7 +220,7 @@
     background-color: #333;
     display: flex;
     justify-content: space-around;
-    padding: 100px 100px; /* Add some padding to top and bottom */
+    padding: 100px 110px; /* Add some padding to top and bottom */
   }
 
   .navbar-list {
