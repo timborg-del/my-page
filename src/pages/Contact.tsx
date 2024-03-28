@@ -23,7 +23,7 @@ const { language } = useLanguageContext();
               </p>
               <br />
               <p className="slide-from-right fade-in-2">
-                {language === 'swedish' ? 'Telefon:' : 'Phone:'} +46 (790) 47 37 771
+                {language === 'swedish' ? 'Telefon:' : 'Phone:'} +46 (790) 47 3 771
               </p>
               <br />
               <p className="slide-from-right fade-in-3">
