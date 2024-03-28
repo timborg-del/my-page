@@ -176,43 +176,40 @@
   font-size: 18px; /* Adjust font size as needed */
 }
 
+@media (min-width: 769px) {
+  .navbar-list {
+    display:inline-flex;
+    flex-direction: row; /* Display navbar items in a row */
+    justify-content: flex-end; /* Align items to the right */
+    list-style: none; /* Remove default list styles */
+    margin: 0;
+    
+  }
 
-.navbar-list {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .navbar-item {
+    margin-left: 55px; /* Add spacing between navbar items */
+    font-size: 30px;
+    position: static; /* Reset position */
+    overflow: visible; /* Reset overflow */
+    transform: none; /* Reset transform */
+    transition: none; /* Reset transition */
+  }
+
+  .navbar-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px; /* Adjust font size as needed */
+  }
+
+  .navbar-item span.icofont {
+    font-size: 25px; /* Adjust icon font size */
+  }
+
+  .menu-button {
+    display: none; /* Hide the hamburger menu button on larger screens */
+  }
 }
 
-.navbar-item {
-  position: relative;
-  overflow: hidden;
-  transform: perspective(1000px) translateZ(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-.navbar-item a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.navbar-item span.icofont {
-  transition: transform 0.3s ease-in-out;
-}
-
-.navbar-item:hover {
-  transform: translateY(-4px) translateZ(30px);
-}
-
-.navbar-item:hover span.icofont {
-  transform: rotate(360deg);
-}
 
 /* Media query for phone screen size */
 @media (max-width: 768px) {
