@@ -178,7 +178,7 @@
 
 @media (min-width: 769px) {
   .navbar-list {
-    display:inline-flex;
+    display:-webkit-flex;
     flex-direction: row; /* Display navbar items in a row */
     justify-content: flex-end; /* Align items to the right */
     list-style: none; /* Remove default list styles */
@@ -189,6 +189,7 @@
   .navbar-item {
     margin-left: 55px; /* Add spacing between navbar items */
     font-size: 30px;
+    margin-inline-end: auto; /* solwed position of the list */
     position: static; /* Reset position */
     overflow: visible; /* Reset overflow */
     transform: none; /* Reset transform */
@@ -198,7 +199,13 @@
   .navbar-item a {
     color: white;
     text-decoration: none;
-    font-size: 25px; /* Adjust font size as needed */
+    font-size: 25px;
+    margin: 10px 0; /* Add margin between menu items */
+    transition: color 0.3s ease; /* Adjust font size as needed */
+  }
+
+  .navbar-item a:hover{
+    color: #f39c12
   }
 
   .navbar-item span.icofont {
@@ -549,7 +556,9 @@ p {
   }
 
   .hero-image {
-    width: 100%; /* Full width for the image */
+    
+    padding: 5rem;
+    width: 50%; /* Full width for the image */
   }
 
   .home-content {
