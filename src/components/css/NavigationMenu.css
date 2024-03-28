@@ -164,9 +164,13 @@
   width: 100%;
   z-index: 100;
   background-color: #333;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); /* Adjust values as needed */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   padding: 15px;
-  padding-top: -40px; /* Adjust as needed */
+}
+
+.menu-button {
+  color: #ccc;
+  display: none; /* Hide the button by default */
 }
 
 .navbar-list {
@@ -176,7 +180,6 @@
   align-items: center;
   margin: 0;
   padding: 0;
-  box-shadow: #333;
 }
 
 .navbar-item {
@@ -204,44 +207,36 @@
   transform: rotate(360deg);
 }
 
-/* Your existing styles for desktop view */
-
 /* Media query for phone screen size */
-@media (max-width: 500px) {
-  .navbar {
-    max-width: 100%; /* Make it full width */
-    position: fixed; /* Stick it to the bottom */
-    bottom: 50;
-    left: 0;
-    right: 0;
-    z-index: 100; /* Bring it to the front */
-    border-top-left-radius: 20px; /* Apply border-radius to the top-left corner */
-    border-top-right-radius: 20px; /* Apply border-radius to the top-right corner */
-    background-color: #333;
-    display: flex;
-    justify-content: space-around;
-    padding: 100px 100px; /* Add some padding to top and bottom */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block; /* Display the button on smaller screens */
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 
   .navbar-list {
-    flex-direction: row; /* Align icons horizontally */
-    align-items: center;
-    padding: 0;
-    margin: 0;
+    display: none; /* Hide the menu by default on smaller screens */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-list.active {
+    display: flex; /* Show the menu when active */
   }
 
   .navbar-item {
-    margin-left: 10px; /* Add some space between items */
-    margin-right: 10px;
-  }
-
-  /* Adjust the font size for mobile view */
-  .navbar-item a {
-    font-size: 10px;
-    color: white;
-    text-decoration: none;
+    margin: 10px 0; /* Add margin between menu items */
   }
 }
+
 
 
 p {
@@ -331,7 +326,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 30vh; /* Adjust this to fit your layout */
+  height: 70vh; /* Adjust this to fit your layout */
 }
 
 .hline1 {
