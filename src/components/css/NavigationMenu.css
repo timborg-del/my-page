@@ -170,16 +170,23 @@
 
 .menu-button {
   color: #ccc;
-  display: none; /* Hide the button by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* Adjust font size as needed */
 }
 
+
 .navbar-list {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-item {
@@ -229,9 +236,48 @@
   }
 
   .navbar-list.active {
-    display: flex; /* Show the menu when active */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 5px;
+    width: 20%;
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hide the menu */
+    transform: translateY(-20px); /* Move the menu up */
+    transition: opacity 1s ease, transform 1s ease; /* Add smooth transition */
   }
 
+  
+  .navbar-item span.icofont {
+    font-size: 10px; /* Adjust the font size for the icons */
+  }
+  
+  
+  .navbar-list.active.show {
+    opacity: 50; /* Show the menu */
+    transform: translateY(3); /* Move the menu down */
+    border-bottom-right-radius: 3rem ;
+    background-color: rgba(51, 51, 51, 0.7);/* Transparent background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .navbar-list.active a {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    margin: 5px 0; /* Add margin between menu items */
+    transition: color 0.3s ease; /* Add smooth color transition */
+  }
+  
+  .navbar-list.active a:hover {
+    color: #f39c12; /* Change color on hover */
+  }
+  
   .navbar-item {
     margin: 10px 0; /* Add margin between menu items */
   }

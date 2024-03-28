@@ -16,7 +16,7 @@ const NavigationMenu: React.FC = () => {
       <button className="menu-button" onClick={toggleMenu}>
         <span className="menu-icon">&#9776;</span> {/* Hamburger menu icon */}
       </button>
-      <ul className="navbar-list">
+      <ul className={`navbar-list ${menuOpen ? 'active show' : ''}`}>
         <li className="navbar-item">
           <Link to=""><span className="icofont">&#xef47;</span>{language === 'swedish' ? ' Hem' : ' Home'}</Link>
         </li>
@@ -38,4 +38,10 @@ const NavigationMenu: React.FC = () => {
 };
 
 export default NavigationMenu;
+
+
+
+
+
+
 
