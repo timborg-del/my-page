@@ -2,7 +2,6 @@ body{
   background-color: #949494;
 }
 
-
 .about-me-container {
   background-color: #bbbbbb;
   padding: 20px;
@@ -549,7 +548,7 @@ p {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #949494;
 }
 
 .hero-image {
