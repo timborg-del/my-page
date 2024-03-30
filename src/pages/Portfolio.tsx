@@ -13,7 +13,7 @@ export const Portfolio = () => {
     <div>
     <div className='container-hline'>
         <header>
-      <h1 className="hline1">{language === 'swedish' ? 'Portfölj' : 'Portfolio'}</h1>
+      <h1 className="hline1">{language === 'swedish' ? 'PORTFÖLJ' : 'PORTFOLIO'}</h1>
     </header>
     </div>
     <div className="portfolio-container">

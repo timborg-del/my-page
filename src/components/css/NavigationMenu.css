@@ -1,5 +1,10 @@
+body{
+  background-color: #949494;
+}
+
+
 .about-me-container {
-  background-color: #eff2f3;
+  background-color: #bbbbbb;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -52,7 +57,7 @@
 /* Cv.css */
 
 .cv {
-  background-color: #eff2f3;
+  background-color: #bfbfbf;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -81,7 +86,7 @@
 }
 
 .cv-entry {
-  background-color: #fff;
+  background-color: #d0d0d0;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
@@ -93,6 +98,7 @@
   max-width: 100px;
   display: block;
   margin: 0 auto 10px;
+  
 }
 
 .cv-job-title {
@@ -160,10 +166,12 @@
 /*Navbar*/
 .navbar {
   position: fixed;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: #333;
+  background-color: #101010;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   padding: 15px;
 }
@@ -173,7 +181,9 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 18px; /* Adjust font size as needed */
+  border-style: none;
+  outline: none;
+  font-size: 25px; /* Adjust font size as needed */
 }
 
 @media (min-width: 769px) {
@@ -286,7 +296,9 @@
     margin: 10px 0; /* Add margin between menu items */
   }
 }
-
+.project-description p{
+  color:  red;
+}
 
 
 p {
@@ -426,7 +438,7 @@ p {
 .portfolio-title {
   font-size: 32px;
   margin-bottom: 30px;
-  color: #333; /* Dark text color */
+  color: #c6c6c6; /* Dark text color */
   position: relative;
   text-align: center;
   margin-top: 50px;
@@ -434,7 +446,7 @@ p {
   font-family: "Helvetica Neue", sans-serif;
   font-size: 36px;
   font-weight: bold;
-  color: #333; /* Adjust the color to your preference */ /* Make the text container an inline block */
+  color: #c4c4c4; /* Adjust the color to your preference */ /* Make the text container an inline block */
 }
 
 .portfolio-title::before {
@@ -483,7 +495,7 @@ p {
 .project-description p {
   font-size: 16px;
   line-height: 1.5;
-  color: #666; /* Slightly lighter text color */
+  color: #434343; /* Slightly lighter text color */
 }
 @media (max-width: 500px){
   /* Your existing styles for desktop view */

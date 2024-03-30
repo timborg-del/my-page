@@ -72,7 +72,7 @@ const AboutMe = () => {
       <div className='container-hline'>
       <header>
         <h1 className='hline1'>       
-          {language === 'swedish' ? 'Om Mig' : 'About Me'}
+          {language === 'swedish' ? 'OM MIG' : 'ABOUT ME'}
           </h1>       
       </header>
       </div>
