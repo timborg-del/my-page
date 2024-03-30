@@ -174,20 +174,7 @@ body{
   padding: 15px;
 }
 
-.menu-button {
-  color: #ab0000;
-  background: none;
-  border: none;
-  cursor: pointer;
-  border-style: none;
-  outline: none;
-  font-size: 25px; /* Adjust font size as needed */
-  transition: transform 0.3s ease; /* Add transition for smooth animation */
-}
 
-.menu-button.active {
-  transform: rotate(90deg); /* Rotate the button when active */
-}
 
 
 @media (min-width: 769px) {
