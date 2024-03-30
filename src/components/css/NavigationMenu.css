@@ -165,7 +165,6 @@ body{
 /*Navbar*/
 .navbar {
   position: fixed;
-  border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   top: 0;
   width: 100%;
@@ -176,14 +175,20 @@ body{
 }
 
 .menu-button {
-  color: #ccc;
+  color: #ab0000;
   background: none;
   border: none;
   cursor: pointer;
   border-style: none;
   outline: none;
   font-size: 25px; /* Adjust font size as needed */
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
 }
+
+.menu-button.active {
+  transform: rotate(90deg); /* Rotate the button when active */
+}
+
 
 @media (min-width: 769px) {
   .navbar-list {
@@ -230,22 +235,23 @@ body{
 /* Media query for phone screen size */
 @media (max-width: 768px) {
   .menu-button {
-    display: block; /* Display the button on smaller screens */
+    color: #c50000;
     background: none;
     border: none;
     cursor: pointer;
+    border-style: none;
+    outline: none;
+    font-size: 25px; /* Adjust font size as needed */
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
   }
+  
+  .menu-button.active {
+    transform: rotate(90deg); /* Rotate the button when active */
+  }
+  
 
   .navbar-list {
     display: none; /* Hide the menu by default on smaller screens */
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .navbar-list.active {
@@ -260,7 +266,7 @@ body{
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     opacity: 0; /* Initially hide the menu */
-    transform: translateY(-20px); /* Move the menu up */
+    transform: translateY(-5px); /* Move the menu up */
     transition: opacity 1s ease, transform 1s ease; /* Add smooth transition */
   }
 
@@ -295,9 +301,7 @@ body{
     margin: 10px 0; /* Add margin between menu items */
   }
 }
-.project-description p{
-  color:  red;
-}
+
 
 
 p {
