@@ -235,40 +235,42 @@ body{
   .close-icon {
     transition: opacity 0.3s ease, transform 0.3s ease;
     position: absolute;
-    margin-left: 1.5rem;
+    margin-left: 0.5rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 30px;
+    font-size: 24px;
   }
   
   .close-icon {
     opacity: 0;
+    font-size: 30px;
   }
 
   .circle {
     position: absolute;
-    margin-left: 1.5rem;
+    margin-left: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.36);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40px; /* Adjust the size of the circle */
-    height: 45px; /* Adjust the size of the circle */
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Transparent white border */
+    width: 41px; /* Adjust the size of the circle */
+    height: 41px; /* Adjust the size of the circle */
+    border-radius: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Transparent white border */
     transition: opacity 0.3s ease, transform 0.3s ease;
     animation: pulse 7s infinite alternate;
     z-index: -1;
   }
   @keyframes pulse {
     0% {
-      border-color: rgba(3, 86, 220, 0.812); /* Initial color (transparent white) */
+      border-color: rgba(0, 68, 177, 0.344); /* Initial color (transparent white) */
     }
     50% {
-      border-color: rgba(120, 0, 114, 0.974); /* Final color (semi-transparent red) */
+      border-color: rgba(120, 0, 114, 0.447); /* Final color (semi-transparent red) */
     }
     100% {
-      border-color: rgba(255, 81, 0, 0.72); /* Final color (semi-transparent red) */
+      border-color: rgba(255, 81, 0, 0.234); /* Final color (semi-transparent red) */
     }
   }
     
@@ -280,11 +282,16 @@ body{
   
   .open .close-icon {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1.1);
   }
 
   .open .circle {
-    opacity: 0;
+    opacity: 1;
+    width: 35px;
+    height: 35px;
+    border-color: rgba(180, 0, 0, 0.451);
+    border-radius: 0%;
+    animation: none;
   }
   
   

@@ -6,9 +6,14 @@ import './css/NavigationMenu.css';
 const NavigationMenu: React.FC = () => {
   const { language } = useLanguageContext();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [animateCircle, setAnimateCircle] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+    setAnimateCircle(true); // Trigger circle animation
+    setTimeout(() => {
+      setAnimateCircle(false);
+    }, 500); // Duration of animation
   };
 
   return (
@@ -16,7 +21,7 @@ const NavigationMenu: React.FC = () => {
       <button className={`menu-button ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span className={`menu-icon ${menuOpen ? 'hide' : ''}`}>&#9776;</span>
         <span className={`close-icon ${menuOpen ? 'show' : ''}`}>&times;</span>
-        <div className={`circle ${menuOpen ? 'show' : ''}`}></div>
+        <div className={`circle ${menuOpen ? 'show' : ''} ${animateCircle ? 'animate-border' : ''}`}></div>
       </button>
 
       <ul className={`navbar-list ${menuOpen ? 'active show' : ''}`}>
@@ -41,6 +46,7 @@ const NavigationMenu: React.FC = () => {
 };
 
 export default NavigationMenu;
+
 
 
 
