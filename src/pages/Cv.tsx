@@ -65,7 +65,7 @@ export const Cv = () => {
     <div>
       <div className='container-hline'>
           <header>
-        <h1 className="hline1">{language === 'swedish' ? 'CV' : 'Resume'}</h1>
+        <h1 className="hline1">{language === 'swedish' ? 'CV' : 'RESUME'}</h1>
       </header>
       </div>
 

@@ -16,6 +16,7 @@ const NavigationMenu: React.FC = () => {
       <button className={`menu-button ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span className={`menu-icon ${menuOpen ? 'hide' : ''}`}>&#9776;</span>
         <span className={`close-icon ${menuOpen ? 'show' : ''}`}>&times;</span>
+        <div className={`circle ${menuOpen ? 'show' : ''}`}></div>
       </button>
 
       <ul className={`navbar-list ${menuOpen ? 'active show' : ''}`}>
