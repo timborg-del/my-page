@@ -13,9 +13,11 @@ const NavigationMenu: React.FC = () => {
 
   return (
     <nav className={`navbar ${menuOpen ? 'active' : ''}`}>
-      <button className="menu-button" onClick={toggleMenu}>
-        <span className="menu-icon">&#9776;</span> {/* Hamburger menu icon */}
+      <button className={`menu-button ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+        <span className={`menu-icon ${menuOpen ? 'hide' : ''}`}>&#9776;</span>
+        <span className={`close-icon ${menuOpen ? 'show' : ''}`}>&times;</span>
       </button>
+
       <ul className={`navbar-list ${menuOpen ? 'active show' : ''}`}>
         <li className="navbar-item">
           <Link to=""><span className="icofont">&#xef47;</span>{language === 'swedish' ? ' Hem' : ' Home'}</Link>
@@ -38,6 +40,7 @@ const NavigationMenu: React.FC = () => {
 };
 
 export default NavigationMenu;
+
 
 
 

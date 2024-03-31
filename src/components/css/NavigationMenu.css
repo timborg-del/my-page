@@ -222,19 +222,40 @@ body{
 /* Media query for phone screen size */
 @media (max-width: 768px) {
   .menu-button {
-    color: #c50000;
+    color:  rgb(159, 2, 2);
     background: none;
     border: none;
     cursor: pointer;
-    border-style: none;
     outline: none;
-    font-size: 25px; /* Adjust font size as needed */
-    transition: transform 0.3s ease; /* Add transition for smooth animation */
+    padding: 0;
+    position: relative;
   }
   
-  .menu-button.active {
-    transform: rotate(90deg); /* Rotate the button when active */
+  .menu-icon,
+  .close-icon {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
   }
+  
+  .close-icon {
+    opacity: 0;
+  }
+  
+  .open .menu-icon {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  
+  .open .close-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  
+  
   
 
   .navbar-list {
