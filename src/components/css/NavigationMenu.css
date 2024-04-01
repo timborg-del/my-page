@@ -618,9 +618,11 @@ p {
   }
   
   .hero-image {
-    display: inline;
+    display: flex;
     width: 50%; /* Adjust the width to your preference */
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
+    box-shadow: #101010;
+    border-radius: 2rem; /* Maintain aspect ratio */
   }
 }
 
@@ -633,7 +635,8 @@ p {
     flex-direction: column; /* Stack content vertically */
     align-items: center; /* Center items horizontally */
     padding: 20px;
-    padding-top: 150px; /* Add spacing around content */
+    padding-top: 100px; /* Add spacing around content */
+    
   }
 
   .hero-image {
@@ -641,6 +644,7 @@ p {
     width: 250px; /* Full width for the image */
     max-width: 500px; /* Limit maximum width */
     margin-bottom: 0px; /* Add spacing between image and content */
+
   }
 
   .home-content {
