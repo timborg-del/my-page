@@ -429,7 +429,7 @@ p {
     padding: 13px; /* Adjust padding as needed */
     background: linear-gradient(135deg, #ff000066, #000); /* Gradient background for depth effect */
     border: none;
-    border-radius: 50%; /* Make the button fully round */
+    border-radius: 100%; /* Make the button fully round */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add box shadow for 3D effect */
     color: white; /* Set text color to white */
     cursor: pointer; /* Show pointer cursor on hover */
@@ -468,6 +468,7 @@ p {
 
 .hline1 {
   text-align: center;
+  padding-top: 60px;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 36px;
   font-weight: bold;
@@ -632,19 +633,27 @@ p {
     flex-direction: column; /* Stack content vertically */
     align-items: center; /* Center items horizontally */
     padding: 20px;
-    padding-top: 100px; /* Add spacing around content */
+    padding-top: 150px; /* Add spacing around content */
   }
 
   .hero-image {
     display: flex;
-    width: auto; /* Full width for the image */
+    width: 250px; /* Full width for the image */
     max-width: 500px; /* Limit maximum width */
     margin-bottom: 0px; /* Add spacing between image and content */
   }
 
   .home-content {
+    display: flex;
+    padding: 20px;
     text-align: center; /* Center text */
-    max-width: 500px; /* Limit maximum width */
+    max-width: 200px; /* Limit maximum width */
+    
+  }
+  .home-content p{
+    display: flex;
+    padding: 20px;
+
   }
 }
 
