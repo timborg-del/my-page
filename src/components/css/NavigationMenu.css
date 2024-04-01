@@ -651,7 +651,7 @@ p {
     display: flex;
     padding: 20px;
     text-align: center; /* Center text */
-    max-width: 200px; /* Limit maximum width */
+    max-width: auto; /* Limit maximum width */
     
   }
   .home-content p{
