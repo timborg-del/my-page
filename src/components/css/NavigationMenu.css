@@ -114,11 +114,19 @@ body{
 }
 
 @media (max-width: 768px) {
+
+  .cv{
+    display: flex;
+  }
   .cv-container {
+    display: flex;
+    width: fit-content;
     flex-direction: column;
   }
 
   .cv-entry {
+    display:block;
+    text-align: center;
     width: 100%;
     margin: 0 0 20px;
   }
