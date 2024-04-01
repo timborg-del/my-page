@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useLanguageContext } from '../components/LanguageProvider';
 import './css/NavigationMenu.css';
 
+
 const NavigationMenu: React.FC = () => {
   const { language } = useLanguageContext();
   const [menuOpen, setMenuOpen] = useState(false);

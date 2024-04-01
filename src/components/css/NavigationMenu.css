@@ -167,6 +167,7 @@ body{
   position: fixed;
   border-bottom-right-radius: 0.5rem;
   top: 0;
+  left: 0; /* Align navbar to the left */
   width: 100%;
   z-index: 100;
   background-color: #101010;
@@ -176,19 +177,18 @@ body{
 
 
 
-
-@media (min-width: 769px) {
+@media (min-width: 1199px) {
   .navbar-list {
     display:-webkit-flex;
     flex-direction: row; /* Display navbar items in a row */
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: flex-start; /* Align items to the right */
     list-style: none; /* Remove default list styles */
     margin: 0;
     
   }
 
   .navbar-item {
-    margin-left: 55px; /* Add spacing between navbar items */
+    margin-left: 0px; /* Add spacing between navbar items */
     font-size: 30px;
     margin-inline-end: auto; /* solwed position of the list */
     position: static; /* Reset position */
@@ -220,9 +220,11 @@ body{
 
 
 /* Media query for phone screen size */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .menu-button {
+    background-color: #666;
     color:  rgb(115, 5, 225);
+    margin-bottom: 12px;
     background: none;
     border: none;
     cursor: pointer;
@@ -250,7 +252,7 @@ body{
   .circle {
     position: absolute;
     margin-left: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.36);
+    background-color: rgba(25, 25, 25, 0.36);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -294,9 +296,6 @@ body{
     animation: none;
   }
   
-  
-  
-
   .navbar-list {
     display: none; /* Hide the menu by default on smaller screens */
   }
@@ -418,21 +417,47 @@ p {
 }
 /*Language bttn */
 
-.language-button {
-  padding: 0;
-  background: none;
-  border: none;
+.language-switcher-container {
   position: fixed;
-  top: 80px; /* Adjust the vertical position as needed */
-  right: 10px; /* Adjust the horizontal position as needed */
+  top: 18px; /* Adjust the vertical position from the top */
+  right: 0.8rem;
+  z-index: 999;
+  border: none; /* Ensure it appears above other elements */
 }
 
-.flag-icon {
-  font-size: 32px; /* Adjust the size of the flag icon */
-  line-height: 1; /* Ensure the flag icon is vertically centered */
-}
+  .language-button {
+    padding: 13px; /* Adjust padding as needed */
+    background: linear-gradient(135deg, #ff000066, #000); /* Gradient background for depth effect */
+    border: none;
+    border-radius: 50%; /* Make the button fully round */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add box shadow for 3D effect */
+    color: white; /* Set text color to white */
+    cursor: pointer; /* Show pointer cursor on hover */
+    outline: none; /* Remove default outline */
+    transition: transform 0.2s, box-shadow 0.2s; /* Add transitions for smooth effect */
+  }
+  
+  .language-button:hover {
+    transform: scale(1.05); /* Scale up slightly on hover for depth effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Increase shadow on hover for depth effect */
+  }
 
+  .language-button:active {
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.3); /* Change box shadow color when button is clicked */
+  }
 
+  .language-button.clicked {
+    background: linear-gradient(135deg, #0220e3a0, #000); /* Gradient background for depth effect */
+  }
+  
+  .flag-icon {
+    font-size: 22px; /* Adjust the size of the flag icon */
+    line-height: 1; /* Ensure the flag icon is vertically centered */
+    margin: 0; /* Remove default margin */
+    border: none;
+  }
+  
+  
 .container-hline {
   display: flex;
   flex-direction: column;
@@ -470,14 +495,6 @@ p {
   transform: scaleX(1); /* On hover, make the underline visible */
 }
 
-
-
-
-
-
-/* Add more animation keyframes and styles as needed */
-/* Portfolio.css */
-/* Portfolio.css */
 .portfolio-container {
   max-width: 800px;
   margin: 0 auto;
@@ -547,11 +564,11 @@ p {
   line-height: 1.5;
   color: #434343; /* Slightly lighter text color */
 }
-@media (max-width: 500px){
+@media (max-width: 1200px){
   /* Your existing styles for desktop view */
 
 /* Media query for phone screen size */
-@media (max-width: 500px) {
+@media (max-width: 1200px) {
   .project {
     flex-direction: column; /* Stack content vertically */
     margin-bottom: 20px; /* Reduce the margin for better spacing */
@@ -584,49 +601,53 @@ p {
 
 }
 
-.language-switcher-container {
-  position: absolute;
-  top: 70px;
-  right: 10px;
-  z-index: 999; /* Ensure it appears above other elements */
-}
+
 /* Home.css */
 
 /* Styles for the home container */
 /* Styles for desktop view (default) */
-.home-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #949494;
+@media (min-width: 1199px) {
+  .home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    background-color: #949494;
+    padding-top: 100px;
+  }
+  
+  .hero-image {
+    display: inline;
+    width: 50%; /* Adjust the width to your preference */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
 
-.hero-image {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 /* Media query for mobile view */
-@media (max-width: 500px) {
+@media (max-width: 1200px) {
   .home-container {
+    display: flex;
     flex-direction: column; /* Stack content vertically */
-    padding: 20px; /* Add spacing around content */
+    align-items: center; /* Center items horizontally */
+    padding: 20px;
+    padding-top: 100px; /* Add spacing around content */
   }
 
   .hero-image {
-    
-    padding: 5rem;
-    width: 50%; /* Full width for the image */
+    display: flex;
+    width: auto; /* Full width for the image */
+    max-width: 500px; /* Limit maximum width */
+    margin-bottom: 0px; /* Add spacing between image and content */
   }
 
   .home-content {
     text-align: center; /* Center text */
-    margin-top: 20px; /* Add spacing between image and text */
+    max-width: 500px; /* Limit maximum width */
   }
 }
+
 
 
 /* Styles for the hero image */
