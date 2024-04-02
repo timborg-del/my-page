@@ -683,7 +683,7 @@ p {
 /* Styles for the hero image */
 .hero-image img {
   display: block; /* Ensure the image behaves as a block element */
-  max-width: 500px; /* Set a fixed maximum width for the image */
+  max-width: 300px; /* Set a fixed maximum width for the image */
   max-height: 100%; /* Ensure the image doesn't exceed its container's height */
   margin-right: 100px;
   width: auto; /* Allow the width to adjust automatically */
@@ -710,7 +710,7 @@ p {
 
 /* Styles for the paragraph */
 .home-content p {
-  display: flex;
+  display: inline-block;
   font-size: 18px;
   color: #666; /* Text color for the paragraph */
 
