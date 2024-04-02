@@ -117,25 +117,26 @@ body{
 
   .cv{
     display: flex;
+    text-align: center;
     margin: 0 auto;
   }
   .cv-container {
     display: flex;
     margin: 0 auto;
+    text-align: center;
     flex-direction: column;
   }
 
   .cv-entry {
-    display:grid;
-    margin: 0 auto;
-    text-align: center;
+    display:inline-block;
+    margin-right: 0 auto;
+    text-align: left;
     width: 100%;
     border: none;
     background: none;
     
   }
 }
-
 
 
 
@@ -202,6 +203,7 @@ body{
   .navbar-item {
     margin-left: 0px; /* Add spacing between navbar items */
     font-size: 30px;
+    flex-basis: 20%;
     margin-inline-end: auto; /* solwed position of the list */
     position: static; /* Reset position */
     overflow: visible; /* Reset overflow */
@@ -432,7 +434,7 @@ p {
 .language-switcher-container {
   position: fixed;
   top: 18px; /* Adjust the vertical position from the top */
-  right: 0.8rem;
+  right: 1rem;
   z-index: 999;
   border: none; /* Ensure it appears above other elements */
 }
@@ -673,19 +675,28 @@ p {
   }
 }
 
-
+.hero-image {
+  position:relative; /* Ensure position context for absolutely positioned elements */
+  max-width: calc(100% - 100px); /* Subtract button width from the container's max-width */
+}
 
 /* Styles for the hero image */
 .hero-image img {
-  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
-  height: auto; /* Maintain the image's aspect ratio */
+  display: block; /* Ensure the image behaves as a block element */
+  max-width: 500px; /* Set a fixed maximum width for the image */
+  max-height: 100%; /* Ensure the image doesn't exceed its container's height */
+  margin-right: 100px;
+  width: auto; /* Allow the width to adjust automatically */
+  height: auto; /* Allow the height to adjust automatically */
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the image */
 }
 
+
 /* Styles for the content to the right of the image */
 .home-content {
+  display: flex;
   padding-right: 20%;
-  text-align: left; /* Align text to the left */
+  text-align: right; /* Align text to the left */
   margin-left: 20px; /* Add some margin to separate content from the image */
 }
 
@@ -699,6 +710,7 @@ p {
 
 /* Styles for the paragraph */
 .home-content p {
+  display: flex;
   font-size: 18px;
   color: #666; /* Text color for the paragraph */
 

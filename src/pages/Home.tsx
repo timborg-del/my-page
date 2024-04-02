@@ -8,13 +8,12 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="hero-image">
-        {/* Replace 'your-image-url.jpg' with the URL or path to your image */}
         <img src={me} alt="Beautiful Landscape" />
       </div>
       <div className="home-content">
         <h1>{language === 'swedish' ? 'Välkommen till min Hemsida' : 'Welcome to my website'}</h1>
         <p>
-        {language === 'swedish' ? 'Upptäck mitt portfolio, erfarnheter, och mer' : 'Discover my portfolio, experiences, and more'} </p>
+        {language === 'swedish' ? 'Upptäck mitt portfolio, erfarnheter, och mer' : 'Discover my portfolio, experiences, and more'}</p>
       </div>
     </div>
   );
