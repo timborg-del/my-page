@@ -655,8 +655,8 @@ p {
 
   .hero-image {
     display: flex;
-    width: 250px; /* Full width for the image */
-    max-width: 500px; /* Limit maximum width */
+    justify-items: center; /* Full width for the image */
+    max-width: 250px; /* Limit maximum width */
     margin-bottom: 0px; /* Add spacing between image and content */
 
   }
@@ -682,7 +682,7 @@ p {
 
 /* Styles for the hero image */
 .hero-image img {
-  display: block; /* Ensure the image behaves as a block element */
+  display: flex; /* Ensure the image behaves as a block element */
   max-width: 300px; /* Set a fixed maximum width for the image */
   max-height: 100%; /* Ensure the image doesn't exceed its container's height */
   margin-right: 100px;
@@ -710,7 +710,7 @@ p {
 
 /* Styles for the paragraph */
 .home-content p {
-  display: inline-block;
+  display: block;
   font-size: 18px;
   color: #666; /* Text color for the paragraph */
 
