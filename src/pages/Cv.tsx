@@ -79,7 +79,6 @@ export const Cv = () => {
             {language === 'swedish' ? 'Volvo Construction Equipment' : 'Volvo Construction Equipment'}
           </strong>
           <br />
-          <br />
           <p>
             {careerChangeText}
           </p>
@@ -91,7 +90,6 @@ export const Cv = () => {
           <strong className="cv-job-title">
             {language === 'swedish' ? 'Melagos Corner med Lexicon' : 'Melagos Corner With Lexicon'}
           </strong>
-          <br />
           <br />
           {/* Use the variable for the lengthy text */}
           <p>{lengthyText}</p>

@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="hero-image">
-        <img src={me} alt="Beautiful Landscape" />
+        <img src={me} alt="Beautiful Landscape" className='me' />
       </div>
       <div className="home-content">
         <h1>{language === 'swedish' ? 'Välkommen till min Hemsida' : 'Welcome to my website'}</h1>
