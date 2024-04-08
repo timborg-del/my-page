@@ -11,7 +11,7 @@ const Home = () => {
         <img src={me} alt="Beautiful Landscape" className='me' />
       </div>
       <div className="home-content">
-        <h1>{language === 'swedish' ? 'Välkommen till min Hemsida' : 'Welcome to my website'}</h1>
+        <h1>{language === 'swedish' ? 'Välkommen!' : 'Welcome!'}</h1>
         <p>
         {language === 'swedish' ? 'Upptäck mitt portfolio, erfarnheter, och mer' : 'Discover my portfolio, experiences, and more'}</p>
       </div>
