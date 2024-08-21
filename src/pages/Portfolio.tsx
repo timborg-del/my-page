@@ -2,6 +2,7 @@ import React from 'react';
 import projectImage from './img/lf.jpg';
 import ifmetall from './img/ifmetall.jpg';
 import applebee from './img/applebee.jpg';
+import webbshop from './img/webbshop.jpg';
 import { useLanguageContext } from '../components/LanguageProvider';
  
 export const Portfolio = () => {
@@ -17,6 +18,21 @@ export const Portfolio = () => {
     </header>
     </div>
     <div className="portfolio-container">
+
+    <div className="project">
+    <img
+        src={webbshop}
+        alt="webbshop.jpg"
+        className="project-image"
+    />
+    <div className="project-description">
+        <h3>JoAnne's Webshop <a href="https://joannesalmonart.com/" target="_blank" rel="noopener noreferrer">https://joannesalmonart.com/</a></h3>
+        <p>
+        {language === 'swedish' ? 'Precis färdigställt en webbshop som är byggd med Vite i frontend och Azure Function C#.' : 'Just completed a webshop built with Vite in the frontend and Azure Function C#.'}
+        </p>
+    </div>
+</div>
+
 
       <div className="project">
         <img
