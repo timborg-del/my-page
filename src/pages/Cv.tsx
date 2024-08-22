@@ -3,7 +3,7 @@ import { useLanguageContext } from '../components/LanguageProvider';
 import lexicon from '../pages/img/logo-lexicon.jpg'; // Replace with the actual path to your first image
 import volvo from '../pages/img/volvo.png'; // Replace with the actual path to your second image
 import '../components/css/NavigationMenu.css'; // Add CSS styling for the CV
-import cvPdf from '../pages/img/timscv.pdf'; // Replace with the actual path to your CV PDF
+
 
 export const Cv = () => {
   const { language } = useLanguageContext();
@@ -94,7 +94,7 @@ export const Cv = () => {
         <p>
           {language === 'swedish' ? 'Vänligen ladda ner mitt CV i PDF här om du vill veta mer om min erfarenhet.' : 'Please download my CV in PDF here if you want to know more about my experience.'}
         </p>
-        <a href={cvPdf} download className="download-button">
+        <a href="https://www.timsa.se/pages/img/timscv.pdf" download className="download-button">
           {language === 'swedish' ? 'Ladda ner CV' : 'Download CV'}
         </a>
       </div>
