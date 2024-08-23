@@ -1,5 +1,4 @@
 import React from 'react'; // Import your CSS styles for the Home component
-import me from './img/cv-me.png';
 import { useLanguageContext } from '../components/LanguageProvider';
 
 
@@ -8,7 +7,6 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="hero-image">
-        <img src={me} alt="Beautiful Landscape" className='me' />
       </div>
       <div className="home-content">
         <h1>{language === 'swedish' ? 'Välkommen!' : 'Welcome!'}</h1>
