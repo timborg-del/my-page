@@ -1,5 +1,5 @@
 import React from 'react'; // Import your CSS styles for the Home component
-import me from './img/Me1.jpg';
+import me from './img/cv-me.png';
 import { useLanguageContext } from '../components/LanguageProvider';
 
 
