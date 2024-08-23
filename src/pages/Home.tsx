@@ -6,13 +6,12 @@ const Home = () => {
   const { language } = useLanguageContext();
   return (
     <div className="home-container">
-      <div className="hero-image">
-      </div>
-      <div className="home-content">
+
+<div className="home-content" style={{ padding: '150px' }}>
         <h1>{language === 'swedish' ? 'Välkommen!' : 'Welcome!'}</h1>
-        <p>
-        {language === 'swedish' ? 'Upptäck mitt portfolio, erfarnheter, och mer' : 'Discover my portfolio, experiences, and more'}</p>
+        <p>{language === 'swedish' ? 'Upptäck mitt portfolio, erfarnheter, och mer' : 'Discover my portfolio, experiences, and more'}</p>
       </div>
+
 
       <div className="download-cv">
         <p>
