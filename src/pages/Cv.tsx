@@ -94,7 +94,7 @@ export const Cv = () => {
         <p>
           {language === 'swedish' ? 'Vänligen ladda ner mitt CV i PDF här om du vill veta mer om min erfarenhet.' : 'Please download my CV in PDF here if you want to know more about my experience.'}
         </p>
-        <a href="https://timsa.s3.eu-north-1.amazonaws.com/timscvo.pdf" download className="download-button">
+        <a href="https://timsa.s3.eu-north-1.amazonaws.com/Cv-2024-08-23.pdf" download className="download-button">
           {language === 'swedish' ? 'Ladda ner CV' : 'Download CV'}
         </a>
       </div>
